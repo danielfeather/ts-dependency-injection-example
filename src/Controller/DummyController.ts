@@ -11,7 +11,7 @@ export default class DummyController {
   }
 
   index(){
-    console.log(this.dummyService.foo());
+    return this.dummyService.foo();
   }
 
 }
