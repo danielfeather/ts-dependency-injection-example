@@ -10,7 +10,7 @@ test('Container instantiates correctly', () => {
   expect(container).toBeInstanceOf(Container);
 })
 
-test('Container to throw an error when non-existent binding requested', () => {
+test('Container to throw BindingResolutionError when non-existent binding requested', () => {
 
   const container = new Container({
     "\\TestBinding": "\\TestFactory"
