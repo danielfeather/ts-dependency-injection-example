@@ -18,6 +18,12 @@ export default class Application implements ApplicationInterface {
     console.log(controller.index());
   }
 
+  async invoke() {
+
+    // 1.
+
+  }
+
   async registerServiceProviders() {
 
     const serviceProviderFolder = path.resolve('./src', 'ServiceProvider');

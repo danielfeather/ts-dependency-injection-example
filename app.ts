@@ -2,9 +2,14 @@ import Application from "./src/Application/Application";
 import Container from "./src/Container/Container";
 
 import Bindings from './config/bindings';
+import Kernel from "./src/Lambda/Kernel";
 
-const container = new Container(Bindings);
+(async function () {
+    const container = new Container(Bindings);
 
-const app = new Application(container);
+    const app = new Application(container);
+    await app.registerServiceProviders();
 
-app.run()
+    const kernel: Kernel = await app.container.get('\\Lambda\\Kernel');
+
+})()
